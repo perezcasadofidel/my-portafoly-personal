@@ -3,17 +3,19 @@ import { useInView } from "./hooks/useInView";
 import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+import memoryMatch from '../../images/memory-match.png';
+
 export function Projects() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Plataforma completa de comercio electrónico con pasarela de pagos, gestión de inventario y panel de administración.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "ecommerce dashboard",
-      github: "https://github.com",
-      demo: "https://example.com",
+      title: "Digital Memory Card Game",
+      description: "Aplicación completa de juego de memoria. Ideal para el desarrollo cognitivo, el entretenimiento educativo o como herramienta de estimulación temprana.",
+      tech: ["React", "TypeScript", "HTML", "Tailwind CSS"],
+      image: memoryMatch,
+      github: "https://github.com/lola0310/memory-match",
+      demo: "https://memory-match-fpc.vercel.app/",
     },
     {
       title: "Task Management App",
@@ -84,7 +86,7 @@ export function Projects() {
             >
               <div className="relative h-48 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
                 <ImageWithFallback
-                  src={`https://source.unsplash.com/800x600/?${project.image}`}
+                  src={`${project.image}`}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
