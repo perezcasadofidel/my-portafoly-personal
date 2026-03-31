@@ -4,6 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 import memoryMatch from '../../images/memory-match.png';
+import musicPlayer from '../../images/music-player.png';
 
 export function Projects() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
@@ -18,12 +19,12 @@ export function Projects() {
       demo: "https://memory-match-fpc.vercel.app/",
     },
     {
-      title: "Task Management App",
-      description: "Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones y sincronización en la nube.",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "WebSockets"],
-      image: "task management app",
-      github: "https://github.com",
-      demo: "https://example.com",
+      title: "Interactive Music Player",
+      description: "Aplicación de reproductor de música interactivo con funcionalidades de playlist, búsqueda y sincronización en la nube.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Web Audio API"],
+      image: musicPlayer,
+      github: "https://github.com/perezcasadofidel/music-player",
+      demo: "https://music-player-fpc.vercel.app/",
     },
     {
       title: "Social Media Dashboard",
