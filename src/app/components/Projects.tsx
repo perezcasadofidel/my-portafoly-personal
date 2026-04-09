@@ -32,7 +32,7 @@ export function Projects() {
     {
       title: "Dahu Page",
       description:
-        "Panel analítico para redes sociales con visualización de datos, reportes automáticos y predicciones con IA.",
+        "Página web corporativa interactiva para la promoción de un negocio, con galería de proyectos y formulario de contacto optimizado.",
       tech: ["React", "TypeScript", "Tailwind CSS", "EmailJS"],
       image: dahuPage,
       github: "https://github.com",
