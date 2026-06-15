@@ -1,11 +1,22 @@
+# Portafolio Personal - Fidel Pérez Casado
 
-  # Portafolio de programador fullstack
+Portfolio single-page de desarrollador full stack, construido con **Vite + React 18 + TypeScript + Tailwind CSS v4**.
 
-  This is a code bundle for Portafolio de programador fullstack. The original project is available at https://www.figma.com/design/AnMhpV7pfXJluvuDFQAU5O/Portafolio-de-programador-fullstack.
+Incluye 6 secciones: Hero, Sobre Mí, Habilidades, Experiencia, Proyectos y Contacto. Usa animaciones con `motion` (Framer Motion), formulario de contacto funcional con EmailJS, tema claro/oscuro con variables CSS en oklch, y navegación por scroll suave.
 
-  ## Running the code
+## Stack principal
 
-  Run `npm i` to install the dependencies.
+- **Vite** 6 — Build tool
+- **React** 18 + TypeScript — UI
+- **Tailwind CSS** 4 — Estilos utilitarios
+- **motion** — Animaciones
+- **EmailJS** — Envío de emails desde el formulario de contacto
+- **shadcn/ui** (Radix) — Componentes UI base
 
-  Run `npm run dev` to start the development server.
-  
+## Scripts
+
+```bash
+npm install     # Instalar dependencias
+npm run dev     # Iniciar servidor de desarrollo
+npm run build   # Build de producción
+```
