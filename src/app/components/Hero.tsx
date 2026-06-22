@@ -1,8 +1,10 @@
 import { motion } from "motion/react";
 import { ChevronDown, Github, Linkedin, Mail,Download } from "lucide-react";
 import cvFileUrl from "@/public/Fidel_Pérez_Casado.pdf?url";
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
+  const { t } = useTranslation();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -48,7 +50,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold text-important mb-4"
           >
-            Desarrollador Full Stack
+            {t("hero.title")}
           </motion.h1>
 
           <motion.div
@@ -57,7 +59,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-2xl md:text-3xl text-amber-700 mb-6"
           >
-            Fidel Pérez Casado
+            {t("hero.name")}
           </motion.div>
 
           <motion.p
@@ -66,7 +68,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg text-important-foreground mb-12 max-w-2xl mx-auto"
           >
-            Creando experiencias digitales excepcionales con código limpio y soluciones innovadoras
+            {t("hero.subtitle")}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -79,7 +81,7 @@ export function Hero() {
                 fontSize: "0.95rem",
               }}
             >
-              Ver Proyectos
+              {t("hero.cta_projects")}
             </button>
             <a
               href={cvFileUrl}
@@ -94,7 +96,7 @@ export function Hero() {
             >
               <span className="flex items-center gap-2">
                 <Download size={16} />
-                Descargar CV
+                {t("hero.cta_cv")}
               </span>
             </a>
           </div>

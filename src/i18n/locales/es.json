@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Desarrollador Full Stack",
+    "name": "Fidel Pérez Casado",
+    "subtitle": "Creando experiencias digitales excepcionales con código limpio y soluciones innovadoras",
+    "cta_projects": "Ver Proyectos",
+    "cta_cv": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "bio_1": "Soy un desarrollador Full Stack apasionado por crear aplicaciones web modernas y eficientes. Con experiencia en tecnologías tanto de frontend como de backend, me especializo en construir soluciones completas que no solo funcionan bien, sino que también ofrecen experiencias de usuario excepcionales.",
+    "bio_2": "Mi enfoque se centra en escribir código limpio, mantenible y escalable, siempre buscando aprender nuevas tecnologías y mejorar mis habilidades. Me encanta trabajar en equipo y contribuir a proyectos que generen un impacto positivo.",
+    "feature_1_title": "Código Limpio",
+    "feature_1_desc": "Desarrollo con las mejores prácticas y estándares de la industria",
+    "feature_2_title": "Alto Rendimiento",
+    "feature_2_desc": "Aplicaciones optimizadas para velocidad y escalabilidad",
+    "feature_3_title": "Soluciones Innovadoras",
+    "feature_3_desc": "Enfoque creativo para resolver problemas complejos"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas"
+  },
+  "experience": {
+    "label": "Trayectoria",
+    "title": "Experiencia Laboral",
+    "items": [
+      {
+        "role": "Full Stack Developer",
+        "company": "GET",
+        "period": "Enero 2023 – Presente",
+        "type": "Full Stack / Tiempo completo",
+        "description": "Desarrollo y mantenimiento de aplicaciones web escalables para clientes internacionales. Liderazgo técnico en proyectos usando React, Node.js y PostgreSQL.",
+        "achievements": [
+          "Disminución del 40% en los tiempos de renderizado inicial mediante estrategias de carga diferida (lazy loading) y reestructuración de consultas a base de datos",
+          "Diseño y despliegue de una arquitectura distribuida basada en microservicios, orquestada con Docker y pipelines automatizados de CI/CD sobre la nube de AWS",
+          "Creación de una capa de autorización robusta con flujos OAuth2, incorporando gestión granular de roles y privilegios de usuario",
+          "Acompañamiento y supervisión formativa de 2 desarrolladores junior, acelerando su curva de integración al equipo y buenas prácticas de código"
+        ],
+        "tech": ["React", "Node.js", "PostgreSQL", "Docker", "AWS"]
+      },
+      {
+        "role": "Frontend Developer",
+        "company": "CITMATEL",
+        "period": "Junio 2022 – Diciembre 2022",
+        "type": "Frontend / Remoto",
+        "description": "Desarrollo de interfaces de usuario modernas y validación funcional para aplicaciones empresariales. Trabajo cercano con equipos de producto y UX para garantizar la fidelidad del diseño y la robustez técnica.",
+        "achievements": [
+          "Implementación de vistas y lógica de interacción compleja utilizando React JS, JavaScript (ES6) y CSS avanzado para layouts responsivos",
+          "Consumo y manejo de datos provenientes de APIs REST construidas sobre Django y base de datos PostgreSQL",
+          "Validación temprana de criterios de aceptación y ejecución de pruebas exploratorias/de regresión para garantizar despliegues sin errores en producción",
+          "Participación clave en Dailies y Retrospectivas para alinear el desarrollo frontend con los objetivos del sprint y la arquitectura del backend"
+        ],
+        "tech": ["React", "TypeScript", "Tailwind CSS", "Integración Django/PostgreSQL", "Metodologías Ágiles (Scrum)"]
+      },
+      {
+        "role": "Junior Web Developer",
+        "company": "FreelanceDev",
+        "period": "Enero 2021 – Mayo 2022",
+        "type": "Freelance",
+        "description": "Desarrollo de sitios web y aplicaciones para pequeñas y medianas empresas. Gestión completa de proyectos desde la conceptualización hasta el despliegue.",
+        "achievements": [
+          "Construcción y entrega de más de 10 portales web adaptados a las necesidades específicas de diversos sectores comerciales",
+          "Integración de funcionalidades de venta en línea mediante la configuración y despliegue de plataformas e-commerce con pasarelas de pago seguras",
+          "Administración y optimización de entornos de alojamiento en Servidores Privados Virtuales (VPS), incluyendo la configuración de servidores web Nginx y la instalación de certificados de seguridad SSL",
+          "Diseño e implementación de APIs REST robustas utilizando Node.js en conjunto con el framework Express"
+        ],
+        "tech": ["JavaScript", "React", "Node.js", "MySQL", "Nginx"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "code": "Código",
+    "demo": "Demo",
+    "items": [
+      {
+        "title": "Dahu Page",
+        "description": "Página web corporativa interactiva para la promoción de un negocio, con galería de proyectos y formulario de contacto optimizado.",
+        "tech": ["React", "TypeScript", "Tailwind CSS", "EmailJS"]
+      },
+      {
+        "title": "Interactive Music Player",
+        "description": "Aplicación de reproductor de música interactivo con funcionalidades de playlist, búsqueda y sincronización en la nube.",
+        "tech": ["React", "TypeScript", "Tailwind CSS", "Web Audio API"]
+      },
+      {
+        "title": "Fitness Tracker",
+        "description": "Aplicación móvil y web para seguimiento de ejercicios, nutrición y objetivos de salud con gráficos interactivos.",
+        "tech": ["React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "title": "Digital Memory Card Game",
+        "description": "Aplicación completa de juego de memoria. Ideal para el desarrollo cognitivo, el entretenimiento educativo o como herramienta de estimulación temprana.",
+        "tech": ["React", "TypeScript", "HTML", "Tailwind CSS"]
+      },
+      {
+        "title": "Portfolio Generator",
+        "description": "Herramienta para crear portafolios personalizados con plantillas dinámicas y exportación a múltiples formatos.",
+        "tech": ["Vue.js", "Express", "MySQL", "AWS S3"]
+      },
+      {
+        "title": "Real Estate Platform",
+        "description": "Plataforma inmobiliaria con búsqueda avanzada, tours virtuales 360° y sistema de mensajería integrado.",
+        "tech": ["Angular", "Spring Boot", "PostgreSQL"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? ¡Hablemos!",
+    "info_title": "Información de Contacto",
+    "email": "Email",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "location_value": "La Habana, Cuba",
+    "benefits_title": "¿Por qué trabajar conmigo?",
+    "benefits": [
+      "Código de alta calidad y bien documentado",
+      "Comunicación clara y constante",
+      "Entrega puntual de proyectos",
+      "Soporte post-entrega"
+    ],
+    "form_name": "Nombre",
+    "form_email": "Email",
+    "form_subject": "Asunto",
+    "form_message": "Mensaje",
+    "form_name_placeholder": "Tu nombre",
+    "form_email_placeholder": "tu@email.com",
+    "form_subject_placeholder": "¿En qué puedo ayudarte?",
+    "form_message_placeholder": "Cuéntame sobre tu proyecto...",
+    "form_submit": "Enviar Mensaje",
+    "form_sending": "Enviando...",
+    "success_title": "¡Mensaje enviado!",
+    "success_text": "Gracias por contactarme. Te responderé en menos de 24 horas.",
+    "send_another": "Enviar otro mensaje",
+    "error_message": "No se pudo enviar el mensaje. Intenta de nuevo en unos minutos."
+  },
+  "footer": {
+    "text": "© 2026 Fidel Pérez Casado. Todos los derechos reservados."
+  },
+  "lang_switch": {
+    "es": "ES",
+    "en": "EN"
+  }
+}

@@ -1,25 +1,27 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 import { Code2, Rocket, Lightbulb } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function About() {
+  const { t } = useTranslation();
   const [ref, isInView] = useInView({ threshold: 0.2 });
 
   const features = [
     {
       icon: Code2,
-      title: "Código Limpio",
-      description: "Desarrollo con las mejores prácticas y estándares de la industria",
+      title: t("about.feature_1_title"),
+      description: t("about.feature_1_desc"),
     },
     {
       icon: Rocket,
-      title: "Alto Rendimiento",
-      description: "Aplicaciones optimizadas para velocidad y escalabilidad",
+      title: t("about.feature_2_title"),
+      description: t("about.feature_2_desc"),
     },
     {
       icon: Lightbulb,
-      title: "Soluciones Innovadoras",
-      description: "Enfoque creativo para resolver problemas complejos",
+      title: t("about.feature_3_title"),
+      description: t("about.feature_3_desc"),
     },
   ];
 
@@ -33,7 +35,7 @@ export function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-important mb-4">
-            Sobre Mí
+            {t("about.title")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto"></div>
         </motion.div>
@@ -45,14 +47,10 @@ export function About() {
           className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 mb-12 border border-stone-200"
         >
           <p className="text-lg text-stone-700 mb-6 leading-relaxed">
-            Soy un desarrollador Full Stack apasionado por crear aplicaciones web modernas y eficientes. 
-            Con experiencia en tecnologías tanto de frontend como de backend, me especializo en construir 
-            soluciones completas que no solo funcionan bien, sino que también ofrecen experiencias de usuario excepcionales.
+            {t("about.bio_1")}
           </p>
           <p className="text-lg text-stone-700 leading-relaxed">
-            Mi enfoque se centra en escribir código limpio, mantenible y escalable, siempre buscando 
-            aprender nuevas tecnologías y mejorar mis habilidades. Me encanta trabajar en equipo y 
-            contribuir a proyectos que generen un impacto positivo.
+            {t("about.bio_2")}
           </p>
         </motion.div>
 

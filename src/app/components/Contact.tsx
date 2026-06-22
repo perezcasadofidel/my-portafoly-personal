@@ -3,8 +3,10 @@ import { useInView } from "./hooks/useInView";
 import { Mail, MapPin, MessageSquare, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+  const { t } = useTranslation();
   const [ref, isInView] = useInView({ threshold: 0.2 });
   const [formData, setFormData] = useState({
     name: "",
@@ -56,9 +58,7 @@ export function Contact() {
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error(error);
-      setErrorMessage(
-        "No se pudo enviar el mensaje. Intenta de nuevo en unos minutos.",
-      );
+      setErrorMessage(t("contact.error_message"));
     } finally {
       setLoading(false);
     }
@@ -67,20 +67,20 @@ export function Contact() {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
+      title: t("contact.email"),
       value: "perezcasadofidel@gmail.com",
       link: "mailto:perezcasadofidel@gmail.com",
     },
     {
       icon: Phone,
-      title: "Teléfono",
+      title: t("contact.phone"),
       value: "+53 56593126",
       link: "tel:+5356593126",
     },
     {
       icon: MapPin,
-      title: "Ubicación",
-      value: "La Habana, Cuba",
+      title: t("contact.location"),
+      value: t("contact.location_value"),
       link: null,
     },
   ];
@@ -95,11 +95,11 @@ export function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-important mb-4">
-            Contacto
+            {t("contact.title")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-6"></div>
           <p className="text-important-foreground text-lg">
-            ¿Tienes un proyecto en mente? ¡Hablemos!
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 
@@ -113,7 +113,7 @@ export function Contact() {
           >
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-stone-200">
               <h3 className="text-2xl font-bold text-stone-900 mb-6">
-                Información de Contacto
+                {t("contact.info_title")}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
@@ -152,25 +152,15 @@ export function Contact() {
               className="bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl p-8 border border-amber-500/30"
             >
               <h4 className="text-xl font-bold text-important mb-4">
-                ¿Por qué trabajar conmigo?
+                {t("contact.benefits_title")}
               </h4>
               <ul className="space-y-3 text-important-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-600 mt-1">✓</span>
-                  <span>Código de alta calidad y bien documentado</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-600 mt-1">✓</span>
-                  <span>Comunicación clara y constante</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-600 mt-1">✓</span>
-                  <span>Entrega puntual de proyectos</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-600 mt-1">✓</span>
-                  <span>Soporte post-entrega</span>
-                </li>
+                {(t("contact.benefits", { returnObjects: true }) as string[]).map((benefit, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-amber-600 mt-1">✓</span>
+                    <span>{benefit}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </motion.div>
@@ -197,10 +187,10 @@ export function Contact() {
                       fontSize: "1.1rem",
                     }}
                   >
-                    ¡Mensaje enviado!
+                    {t("contact.success_title")}
                   </h3>
                   <p style={{ color: "#000", fontSize: "0.88rem" }}>
-                    Gracias por contactarme. Te responderé en menos de 24 horas.
+                    {t("contact.success_text")}
                   </p>
                   <button
                     onClick={() => setSent(false)}
@@ -211,7 +201,7 @@ export function Contact() {
                       border: "#FF6F00",
                     }}
                   >
-                    Enviar otro mensaje
+                    {t("contact.send_another")}
                   </button>
                 </div>
               ) : (
@@ -219,7 +209,7 @@ export function Contact() {
                   <div className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-stone-900 mb-2">
-                        Nombre
+                        {t("contact.form_name")}
                       </label>
                       <input
                         type="text"
@@ -228,13 +218,13 @@ export function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-white/50 border border-stone-300 rounded-lg text-stone-900 placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
-                        placeholder="Tu nombre"
+                        placeholder={t("contact.form_name_placeholder")}
                       />
                     </div>
 
                     <div>
                       <label htmlFor="email" className="block text-stone-900 mb-2">
-                        Email
+                        {t("contact.form_email")}
                       </label>
                       <input
                         type="email"
@@ -243,7 +233,7 @@ export function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-white/50 border border-stone-300 rounded-lg text-stone-900 placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
-                        placeholder="tu@email.com"
+                        placeholder={t("contact.form_email_placeholder")}
                       />
                     </div>
 
@@ -251,7 +241,7 @@ export function Contact() {
                       <label
                         className="flex items-center gap-1.5 mb-2 text-stone-900 "
                       >
-                        Asunto
+                        {t("contact.form_subject")}
                       </label>
                       <input
                         type="text"
@@ -259,14 +249,14 @@ export function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        placeholder="¿En qué puedo ayudarte?"
+                        placeholder={t("contact.form_subject_placeholder")}
                         className="w-full px-4 py-3 bg-white/50 border border-stone-300 rounded-lg text-stone-900 placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
                       />
                   </div>
-                  
+                   
                     <div>
                       <label htmlFor="message" className="block text-stone-900 mb-2">
-                        Mensaje
+                        {t("contact.form_message")}
                       </label>
                       <textarea
                         name="message"
@@ -275,7 +265,7 @@ export function Contact() {
                         required
                         rows={5}
                         className="w-full px-4 py-3 bg-white/50 border border-stone-300 rounded-lg text-stone-900 placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors resize-none"
-                        placeholder="Cuéntame sobre tu proyecto..."
+                        placeholder={t("contact.form_message_placeholder")}
                       />
                     </div>
 
@@ -289,12 +279,12 @@ export function Contact() {
                       {loading ? (
                         <>
                           <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          Enviando...
+                          {t("contact.form_sending")}
                         </>
                       ) : (
                         <>
                           <Send className="w-5 h-5" />
-                          Enviar Mensaje
+                          {t("contact.form_submit")}
                         </>
                       )}
                     </motion.button>
@@ -317,7 +307,7 @@ export function Contact() {
           className="text-center mt-20 pt-8 border-t border-stone-300"
         >
           <p className="text-important-foreground">
-            © 2026 Fidel Pérez Casado. Todos los derechos reservados.
+            {t("footer.text")}
           </p>
         </motion.div>
       </div>

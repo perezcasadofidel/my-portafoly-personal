@@ -2,8 +2,15 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { ChangeColor } from "./me/ChangeColor";
+import { useTranslation } from "react-i18next";
 
-export function Navigation() {
+interface NavigationProps {
+  setLanguage: (lang: string) => void;
+  currentLanguage: string;
+}
+
+export function Navigation({ setLanguage, currentLanguage }: NavigationProps) {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,11 +31,11 @@ export function Navigation() {
   };
 
   const navItems = [
-    { name: "Inicio", id: "hero" },
-    { name: "Sobre mí", id: "about" },
-    { name: "Habilidades", id: "skills" },
-    { name: "Proyectos", id: "projects" },
-    { name: "Contacto", id: "contact" },
+    { name: t("nav.home"), id: "hero" },
+    { name: t("nav.about"), id: "about" },
+    { name: t("nav.skills"), id: "skills" },
+    { name: t("nav.projects"), id: "projects" },
+    { name: t("nav.contact"), id: "contact" },
   ];
 
   return (
@@ -70,9 +77,17 @@ export function Navigation() {
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          <ChangeColor
-            colorMoon={` ${isScrolled ? "#FFFFFF" : "#000000"}`}
-          ></ChangeColor>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setLanguage(currentLanguage === "es" ? "en" : "es")}
+              className={`text-sm font-semibold cursor-pointer ${isScrolled ? "text-muted" : "text-muted-foreground"} hover:text-amber-600 transition-colors`}
+            >
+              {t("lang_switch." + currentLanguage)}
+            </button>
+            <ChangeColor
+              colorMoon={` ${isScrolled ? "#FFFFFF" : "#000000"}`}
+            />
+          </div>
         </div>
 
         {/* Mobile Menu */}

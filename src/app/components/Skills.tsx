@@ -1,12 +1,14 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
+import { useTranslation } from "react-i18next";
 
 export function Skills() {
+  const { t } = useTranslation();
   const [ref, isInView] = useInView({ threshold: 0.2 });
 
   const skillCategories = [
     {
-      name: "Frontend",
+      name: t("skills.frontend"),
       skills: [
         { name: "React", level: 95 },
         { name: "TypeScript", level: 90 },
@@ -16,7 +18,7 @@ export function Skills() {
       ],
     },
     {
-      name: "Backend",
+      name: t("skills.backend"),
       skills: [
         { name: "Node.js", level: 88 },
         { name: "Express", level: 85 },
@@ -26,7 +28,7 @@ export function Skills() {
       ],
     },
     {
-      name: "Herramientas",
+      name: t("skills.tools"),
       skills: [
         { name: "Git", level: 90 },
         { name: "Docker", level: 75 },
@@ -47,7 +49,7 @@ export function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-important mb-4">
-            Habilidades
+            {t("skills.title")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto"></div>
         </motion.div>

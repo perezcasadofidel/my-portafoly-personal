@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Full Stack Developer",
+    "name": "Fidel Pérez Casado",
+    "subtitle": "Creating exceptional digital experiences with clean code and innovative solutions",
+    "cta_projects": "View Projects",
+    "cta_cv": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "bio_1": "I am a Full Stack Developer passionate about building modern and efficient web applications. With experience in both frontend and backend technologies, I specialize in building complete solutions that not only work well but also deliver exceptional user experiences.",
+    "bio_2": "My approach focuses on writing clean, maintainable, and scalable code, always seeking to learn new technologies and improve my skills. I enjoy working in teams and contributing to projects that generate a positive impact.",
+    "feature_1_title": "Clean Code",
+    "feature_1_desc": "Development with industry best practices and standards",
+    "feature_2_title": "High Performance",
+    "feature_2_desc": "Applications optimized for speed and scalability",
+    "feature_3_title": "Innovative Solutions",
+    "feature_3_desc": "Creative approach to solving complex problems"
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
+  "experience": {
+    "label": "Career",
+    "title": "Work Experience",
+    "items": [
+      {
+        "role": "Full Stack Developer",
+        "company": "GET",
+        "period": "January 2023 – Present",
+        "type": "Full Stack / Full-time",
+        "description": "Development and maintenance of scalable web applications for international clients. Technical leadership on projects using React, Node.js and PostgreSQL.",
+        "achievements": [
+          "40% reduction in initial render times through lazy loading strategies and database query restructuring",
+          "Design and deployment of a distributed microservices architecture, orchestrated with Docker and automated CI/CD pipelines on AWS cloud",
+          "Creation of a robust authorization layer with OAuth2 flows, incorporating granular role and user privilege management",
+          "Mentoring and supervision of 2 junior developers, accelerating their integration curve and code best practices"
+        ],
+        "tech": ["React", "Node.js", "PostgreSQL", "Docker", "AWS"]
+      },
+      {
+        "role": "Frontend Developer",
+        "company": "CITMATEL",
+        "period": "June 2022 – December 2022",
+        "type": "Frontend / Remote",
+        "description": "Development of modern user interfaces and functional validation for enterprise applications. Close collaboration with product and UX teams to ensure design fidelity and technical robustness.",
+        "achievements": [
+          "Implementation of complex views and interaction logic using React JS, JavaScript (ES6) and advanced CSS for responsive layouts",
+          "Consumption and management of data from REST APIs built on Django and PostgreSQL database",
+          "Early validation of acceptance criteria and execution of exploratory/regression testing to ensure bug-free production deployments",
+          "Key participation in Dailies and Retrospectives to align frontend development with sprint goals and backend architecture"
+        ],
+        "tech": ["React", "TypeScript", "Tailwind CSS", "Django/PostgreSQL Integration", "Agile Methodologies (Scrum)"]
+      },
+      {
+        "role": "Junior Web Developer",
+        "company": "FreelanceDev",
+        "period": "January 2021 – May 2022",
+        "type": "Freelance",
+        "description": "Development of websites and applications for small and medium businesses. Complete project management from conceptualization to deployment.",
+        "achievements": [
+          "Built and delivered over 10 web portals tailored to the specific needs of various business sectors",
+          "Integration of online sales functionality through configuration and deployment of e-commerce platforms with secure payment gateways",
+          "Administration and optimization of hosting environments on Virtual Private Servers (VPS), including Nginx web server configuration and SSL certificate installation",
+          "Design and implementation of robust REST APIs using Node.js with the Express framework"
+        ],
+        "tech": ["JavaScript", "React", "Node.js", "MySQL", "Nginx"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "code": "Code",
+    "demo": "Demo",
+    "items": [
+      {
+        "title": "Dahu Page",
+        "description": "Interactive corporate website for business promotion, with project gallery and optimized contact form.",
+        "tech": ["React", "TypeScript", "Tailwind CSS", "EmailJS"]
+      },
+      {
+        "title": "Interactive Music Player",
+        "description": "Interactive music player application with playlist functionality, search and cloud synchronization.",
+        "tech": ["React", "TypeScript", "Tailwind CSS", "Web Audio API"]
+      },
+      {
+        "title": "Fitness Tracker",
+        "description": "Mobile and web application for exercise tracking, nutrition and health goals with interactive charts.",
+        "tech": ["React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "title": "Digital Memory Card Game",
+        "description": "Complete memory game application. Ideal for cognitive development, educational entertainment or as an early stimulation tool.",
+        "tech": ["React", "TypeScript", "HTML", "Tailwind CSS"]
+      },
+      {
+        "title": "Portfolio Generator",
+        "description": "Tool to create custom portfolios with dynamic templates and export to multiple formats.",
+        "tech": ["Vue.js", "Express", "MySQL", "AWS S3"]
+      },
+      {
+        "title": "Real Estate Platform",
+        "description": "Real estate platform with advanced search, 360° virtual tours and integrated messaging system.",
+        "tech": ["Angular", "Spring Boot", "PostgreSQL"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk!",
+    "info_title": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "location_value": "Havana, Cuba",
+    "benefits_title": "Why work with me?",
+    "benefits": [
+      "High quality, well-documented code",
+      "Clear and constant communication",
+      "On-time project delivery",
+      "Post-delivery support"
+    ],
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_subject": "Subject",
+    "form_message": "Message",
+    "form_name_placeholder": "Your name",
+    "form_email_placeholder": "you@email.com",
+    "form_subject_placeholder": "How can I help you?",
+    "form_message_placeholder": "Tell me about your project...",
+    "form_submit": "Send Message",
+    "form_sending": "Sending...",
+    "success_title": "Message sent!",
+    "success_text": "Thank you for contacting me. I will reply within 24 hours.",
+    "send_another": "Send another message",
+    "error_message": "Could not send the message. Please try again in a few minutes."
+  },
+  "footer": {
+    "text": "© 2026 Fidel Pérez Casado. All rights reserved."
+  },
+  "lang_switch": {
+    "es": "ES",
+    "en": "EN"
+  }
+}

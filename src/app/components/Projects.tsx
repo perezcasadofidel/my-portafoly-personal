@@ -2,73 +2,36 @@ import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useTranslation } from "react-i18next";
 
 import memoryMatch from "../../images/memory-match.png";
 import musicPlayer from "../../images/music-player.png";
 import dahuPage from "../../images/dahu-page.png";
 import fitnessTracker from "../../images/fitness-tracker.png";
 
+const projectsStatic = [
+  { image: dahuPage, github: "https://github.com", demo: "https://dahu-page.vercel.app/" },
+  { image: musicPlayer, github: "https://github.com/perezcasadofidel/music-player", demo: "https://music-player-fpc.vercel.app/" },
+  { image: fitnessTracker, github: "https://github.com/perezcasadofidel/Fitness-Tracker-App", demo: "https://fitness-tracker-app-fpc.vercel.app/" },
+  { image: memoryMatch, github: "https://github.com/perezcasadofidel/memory-match", demo: "https://memory-match-fpc.vercel.app/" },
+  { image: "portfolio builder", github: "https://github.com", demo: "https://example.com" },
+  { image: "real estate website", github: "https://github.com", demo: "https://example.com" },
+];
+
 export function Projects() {
+  const { t } = useTranslation();
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
-  const projects = [
-    {
-      title: "Dahu Page",
-      description:
-        "Página web corporativa interactiva para la promoción de un negocio, con galería de proyectos y formulario de contacto optimizado.",
-      tech: ["React", "TypeScript", "Tailwind CSS", "EmailJS"],
-      image: dahuPage,
-      github: "https://github.com",
-      demo: "https://dahu-page.vercel.app/",
-    },
-    {
-      title: "Interactive Music Player",
-      description:
-        "Aplicación de reproductor de música interactivo con funcionalidades de playlist, búsqueda y sincronización en la nube.",
-      tech: ["React", "TypeScript", "Tailwind CSS", "Web Audio API"],
-      image: musicPlayer,
-      github: "https://github.com/perezcasadofidel/music-player",
-      demo: "https://music-player-fpc.vercel.app/",
-    },
-    {
-      title: "Fitness Tracker",
-      description:
-        "Aplicación móvil y web para seguimiento de ejercicios, nutrición y objetivos de salud con gráficos interactivos.",
-      tech: ["React", "TypeScript", "Tailwind CSS"],
-      image: fitnessTracker,
-      github: "https://github.com/perezcasadofidel/Fitness-Tracker-App",
-      demo: "https://fitness-tracker-app-fpc.vercel.app/",
-    },
-    {
-      title: "Digital Memory Card Game",
-      description:
-        "Aplicación completa de juego de memoria. Ideal para el desarrollo cognitivo, el entretenimiento educativo o como herramienta de estimulación temprana.",
-      tech: ["React", "TypeScript", "HTML", "Tailwind CSS"],
-      image: memoryMatch,
-      github: "https://github.com/perezcasadofidel/memory-match",
-      demo: "https://memory-match-fpc.vercel.app/",
-    },
-    
-    {
-      title: "Portfolio Generator",
-      description:
-        "Herramienta para crear portafolios personalizados con plantillas dinámicas y exportación a múltiples formatos.",
-      tech: ["Vue.js", "Express", "MySQL", "AWS S3"],
-      image: "portfolio builder",
-      github: "https://github.com",
-      demo: "https://example.com",
-    },
-    
-    {
-      title: "Real Estate Platform",
-      description:
-        "Plataforma inmobiliaria con búsqueda avanzada, tours virtuales 360° y sistema de mensajería integrado.",
-      tech: ["Angular", "Spring Boot", "PostgreSQL"],
-      image: "real estate website",
-      github: "https://github.com",
-      demo: "https://example.com",
-    },
-  ];
+  const projectsTranslated = t("projects.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+    tech: string[];
+  }>;
+
+  const projects = projectsStatic.map((s, i) => ({
+    ...s,
+    ...projectsTranslated[i],
+  }));
 
   return (
     <section id="projects" className="py-20 px-4" ref={ref}>
@@ -80,7 +43,7 @@ export function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-important mb-4">
-            Proyectos Destacados
+            {t("projects.title")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto"></div>
         </motion.div>
@@ -129,7 +92,7 @@ export function Projects() {
                       className={`flex items-center gap-2 text-stone-400 cursor-auto`}
                     >
                       <Github className="w-5 h-5" />
-                      <span className="text-sm">Código</span>
+                      <span className="text-sm">{t("projects.code")}</span>
                     </p>
                   ) : (
                     <motion.a
@@ -141,7 +104,7 @@ export function Projects() {
                       className={`flex items-center gap-2 text-stone-700 hover:text-amber-600 transition-colors`}
                     >
                       <Github className="w-5 h-5" />
-                      <span className="text-sm">Código</span>
+                      <span className="text-sm">{t("projects.code")}</span>
                     </motion.a>
                   )}
                   <motion.a
@@ -153,7 +116,7 @@ export function Projects() {
                     className="flex items-center gap-2 text-stone-700 hover:text-amber-600 transition-colors"
                   >
                     <ExternalLink className="w-5 h-5" />
-                    <span className="text-sm">Demo</span>
+                    <span className="text-sm">{t("projects.demo")}</span>
                   </motion.a>
                 </div>
               </div>

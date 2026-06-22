@@ -1,58 +1,21 @@
 import { motion } from "motion/react";
 import { Briefcase, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const experiences = [
-  {
-    role: "Full Stack Developer",
-    company: "GET",
-    period: "Enero 2023 – Presente",
-    type: "Full Stack / Tiempo completo",
-    description:
-      "Desarrollo y mantenimiento de aplicaciones web escalables para clientes internacionales. Liderazgo técnico en proyectos usando React, Node.js y PostgreSQL.",
-    achievements: [
-      "Disminución del 40% en los tiempos de renderizado inicial mediante estrategias de carga diferida (lazy loading) y reestructuración de consultas a base de datos",
-      "Diseño y despliegue de una arquitectura distribuida basada en microservicios, orquestada con Docker y pipelines automatizados de CI/CD sobre la nube de AWS",
-      "Creación de una capa de autorización robusta con flujos OAuth2, incorporando gestión granular de roles y privilegios de usuario",
-      "Acompañamiento y supervisión formativa de 2 desarrolladores junior, acelerando su curva de integración al equipo y buenas prácticas de código",
-    ],
-    tech: ["React", "Node.js", "PostgreSQL", "Docker", "AWS"],
-    color: "#FF6F00",
-  },
-  {
-    role: "Frontend Developer",
-    company: "CITMATEL",
-    period: "Junio 2022 – Diciembre 2022",
-    type: "Frontend / Remoto",
-    description:
-      "Desarrollo de interfaces de usuario modernas y validación funcional para aplicaciones empresariales. Trabajo cercano con equipos de producto y UX para garantizar la fidelidad del diseño y la robustez técnica.",
-    achievements: [
-      "Implementación de vistas y lógica de interacción compleja utilizando React JS, JavaScript (ES6) y CSS avanzado para layouts responsivos",
-      "Consumo y manejo de datos provenientes de APIs REST construidas sobre Django y base de datos PostgreSQL",
-      "Validación temprana de criterios de aceptación y ejecución de pruebas exploratorias/de regresión para garantizar despliegues sin errores en producción",
-      "Participación clave en Dailies y Retrospectivas para alinear el desarrollo frontend con los objetivos del sprint y la arquitectura del backend",
-    ],
-    tech: ["React", "TypeScript", "Tailwind CSS", "Integración Django/PostgreSQL", "Metodologías Ágiles (Scrum)"],
-    color: "#FFB300",
-  },
-  {
-    role: "Junior Web Developer",
-    company: "FreelanceDev",
-    period: "Enero 2021 – Mayo 2022",
-    type: "Freelance",
-    description:
-      "Desarrollo de sitios web y aplicaciones para pequeñas y medianas empresas. Gestión completa de proyectos desde la conceptualización hasta el despliegue.",
-    achievements: [
-      "Construcción y entrega de más de 10 portales web adaptados a las necesidades específicas de diversos sectores comerciales",
-      "Integración de funcionalidades de venta en línea mediante la configuración y despliegue de plataformas e-commerce con pasarelas de pago seguras",
-      "Administración y optimización de entornos de alojamiento en Servidores Privados Virtuales (VPS), incluyendo la configuración de servidores web Nginx y la instalación de certificados de seguridad SSL",
-      "Diseño e implementación de APIs REST robustas utilizando Node.js en conjunto con el framework Express",
-    ],
-    tech: ["JavaScript", "React", "Node.js", "MySQL", "Nginx"],
-    color: "#FF6F00",
-  },
-];
+const colors = ["#FF6F00", "#FFB300", "#FF6F00"];
 
 export function Experience() {
+  const { t } = useTranslation();
+  const experiences = t("experience.items", { returnObjects: true }) as Array<{
+    role: string;
+    company: string;
+    period: string;
+    type: string;
+    description: string;
+    achievements: string[];
+    tech: string[];
+  }>;
+
   return (
     <section
       id="experience"
@@ -71,7 +34,7 @@ export function Experience() {
             className="text-sm uppercase tracking-widest"
             style={{ color: "#FF6F00" }}
           >
-            Trayectoria
+            {t("experience.label")}
           </span>
           <h2
             className="mt-2"
@@ -81,7 +44,7 @@ export function Experience() {
               color: "important",
             }}
           >
-            Experiencia Laboral
+            {t("experience.title")}
           </h2>
           <div
             className="w-16 h-1 mx-auto mt-4 rounded-full"
@@ -98,7 +61,7 @@ export function Experience() {
           />
 
           <div className="space-y-10">
-            {experiences.map((exp, idx) => (
+            {experiences.map((exp: any, idx: number) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
@@ -111,11 +74,11 @@ export function Experience() {
                 <div
                   className="absolute left-0 top-6 w-12 h-12 rounded-xl items-center justify-center hidden sm:flex"
                   style={{
-                    background: `${exp.color}20`,
-                    border: `2px solid ${exp.color}40`,
+                    background: `${colors[idx]}20`,
+                    border: `2px solid ${colors[idx]}40`,
                   }}
                 >
-                  <Briefcase size={18} style={{ color: exp.color }} />
+                  <Briefcase size={18} style={{ color: colors[idx] }} />
                 </div>
 
                 {/* Card */}
@@ -123,9 +86,9 @@ export function Experience() {
                   className="rounded-2xl p-6 border transition-all duration-300 hover:border-opacity-50"
                   style={{
                     background: "#fff",
-                    borderColor: `${exp.color}20`,
+                    borderColor: `${colors[idx]}20`,
                     borderLeftWidth: "3px",
-                    borderLeftColor: exp.color,
+                    borderLeftColor: colors[idx],
                   }}
                 >
                   {/* Header */}
@@ -141,7 +104,7 @@ export function Experience() {
                         {exp.role}
                       </h3>
                       <div className="flex items-center gap-2 mt-1">
-                        <span style={{ color: exp.color, fontSize: "0.9rem" }}>
+                        <span style={{ color: colors[idx], fontSize: "0.9rem" }}>
                           {exp.company}
                         </span>
                         <ExternalLink size={13} style={{ color: "#475569" }} />
@@ -154,8 +117,8 @@ export function Experience() {
                       <span
                         className="px-2 py-0.5 rounded-full"
                         style={{
-                          background: `${exp.color}15`,
-                          color: exp.color,
+                          background: `${colors[idx]}15`,
+                          color: colors[idx],
                           fontSize: "0.72rem",
                         }}
                       >
@@ -176,7 +139,7 @@ export function Experience() {
                         className="flex items-start gap-2"
                         style={{ color: "#64748b", fontSize: "0.83rem" }}
                       >
-                        <span style={{ color: exp.color, marginTop: "4px", flexShrink: 0 }}>▸</span>
+                        <span style={{ color: colors[idx], marginTop: "4px", flexShrink: 0 }}>▸</span>
                         {a}
                       </li>
                     ))}
@@ -189,9 +152,9 @@ export function Experience() {
                         key={t}
                         className="px-2.5 py-1 rounded-lg text-xs"
                         style={{
-                          background: `${exp.color}10`,
-                          color: exp.color,
-                          border: `1px solid ${exp.color}25`,
+                          background: `${colors[idx]}10`,
+                          color: colors[idx],
+                          border: `1px solid ${colors[idx]}25`,
                         }}
                       >
                         {t}
