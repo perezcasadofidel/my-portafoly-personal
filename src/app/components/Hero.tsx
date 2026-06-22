@@ -46,7 +46,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold text-stone-900 mb-4"
+            className="text-5xl md:text-7xl font-bold text-important mb-4"
           >
             Desarrollador Full Stack
           </motion.h1>
@@ -64,7 +64,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg text-stone-700 mb-12 max-w-2xl mx-auto"
+            className="text-lg text-important-foreground mb-12 max-w-2xl mx-auto"
           >
             Creando experiencias digitales excepcionales con código limpio y soluciones innovadoras
           </motion.p>
@@ -111,9 +111,9 @@ export function Hero() {
               href="https://github.com/perezcasadofidel"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-stone-800/10 backdrop-blur-sm rounded-full hover:bg-stone-800/20 transition-colors"
+              className="p-3 bg-accent backdrop-blur-sm rounded-full hover:bg-accent-foreground transition-colors"
             >
-              <Github className="w-6 h-6 text-stone-900" />
+              <Github className="w-6 h-6 text-important" />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1, rotate: -5 }}
@@ -121,17 +121,17 @@ export function Hero() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-stone-800/10 backdrop-blur-sm rounded-full hover:bg-stone-800/20 transition-colors"
+              className="p-3 bg-accent backdrop-blur-sm rounded-full hover:bg-accent-foreground transition-colors"
             >
-              <Linkedin className="w-6 h-6 text-stone-900" />
+              <Linkedin className="w-6 h-6 text-important" />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
               href="mailto:perezcasadofidel@gmail.com"
-              className="p-3 bg-stone-800/10 backdrop-blur-sm rounded-full hover:bg-stone-800/20 transition-colors"
+              className="p-3 bg-accent backdrop-blur-sm rounded-full hover:bg-accent-foreground transition-colors"
             >
-              <Mail className="w-6 h-6 text-stone-900" />
+              <Mail className="w-6 h-6 text-important" />
             </motion.a>
           </motion.div>
         </motion.div>

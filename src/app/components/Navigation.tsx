@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
+import { ChangeColor } from "./me/ChangeColor";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,17 +36,17 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 w-[100dvw] z-50 transition-all duration-300 ${
-        isScrolled ? "bg-stone-900/95 backdrop-blur-sm shadow-lg" : "md:bg-transparent bg-stone-300/95"
+        isScrolled ? "bg-nav backdrop-blur-sm shadow-lg" : "md:bg-transparent bg-nav-mobile"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className={`text-2xl font-bold ${isScrolled ? "text-amber-600" : "text-stone-900"} cursor-pointer`}
+            className={`text-2xl font-bold ${isScrolled ? "text-primary" : "text-primary-foreground"} cursor-pointer`}
             onClick={() => scrollToSection("hero")}
           >
-            FPC<span className={`${isScrolled ? "text-white" : "text-amber-600"}`}>.</span>
+            FPC<span className={`${isScrolled ? "text-secondary" : "text-secondary-foreground"}`}>.</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -54,7 +55,7 @@ export function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`${isScrolled ? "text-white" : "text-stone-700"} hover:text-amber-600 transition-colors cursor-pointer`}
+                className={`${isScrolled ? "text-muted" : "text-muted-foreground"} hover:text-primary transition-colors cursor-pointer`}
               >
                 {item.name}
               </button>
@@ -63,11 +64,15 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${isScrolled ? "text-white" : "text-stone-900"} `}
+            className={`md:hidden ${isScrolled ? "text-muted" : "text-muted-foreground"} `}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
+          <ChangeColor
+            colorMoon={` ${isScrolled ? "#FFFFFF" : "#000000"}`}
+          ></ChangeColor>
         </div>
 
         {/* Mobile Menu */}

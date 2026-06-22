@@ -78,7 +78,7 @@ export function Experience() {
             style={{
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
               fontWeight: 700,
-              color: "#FFB300",
+              color: "important",
             }}
           >
             Experiencia Laboral

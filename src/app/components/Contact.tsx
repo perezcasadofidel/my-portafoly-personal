@@ -94,11 +94,11 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-important mb-4">
             Contacto
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-6"></div>
-          <p className="text-stone-700 text-lg">
+          <p className="text-important-foreground text-lg">
             ¿Tienes un proyecto en mente? ¡Hablemos!
           </p>
         </motion.div>
@@ -151,10 +151,10 @@ export function Contact() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl p-8 border border-amber-500/30"
             >
-              <h4 className="text-xl font-bold text-stone-900 mb-4">
+              <h4 className="text-xl font-bold text-important mb-4">
                 ¿Por qué trabajar conmigo?
               </h4>
-              <ul className="space-y-3 text-stone-700">
+              <ul className="space-y-3 text-important-foreground">
                 <li className="flex items-start gap-2">
                   <span className="text-amber-600 mt-1">✓</span>
                   <span>Código de alta calidad y bien documentado</span>
@@ -316,7 +316,7 @@ export function Contact() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-20 pt-8 border-t border-stone-300"
         >
-          <p className="text-stone-600">
+          <p className="text-important-foreground">
             © 2026 Fidel Pérez Casado. Todos los derechos reservados.
           </p>
         </motion.div>

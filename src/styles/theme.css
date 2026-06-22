@@ -2,20 +2,27 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
+  --background: #FFFFFF;
+  --background-one: #F5F5F4;
+  --background-two: #FFFBEB;
+  --background-three: #FFF7ED;
+  --nav: #1c1917;
+  --nav-mobile: #d6d3d1;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
+  --primary: #D97706;
+  --primary-foreground: #1c1917;
+  --secondary: #FFFFFF;
+  --secondary-foreground: #D97706;
+  --muted: #FFFFFF;
+  --muted-foreground: #44403C;
+  --important: #1c1917;
+  --important-foreground: #44403c;
+  --accent: color-mix(in oklab, #292524 10%, transparent);
+  --accent-foreground: color-mix(in oklab, #292524 20%, transparent);
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(0, 0, 0, 0.1);
@@ -43,19 +50,26 @@
 
 .dark {
   --background: oklch(0.145 0 0);
+  --background-one: #1C1917;
+  --background-two: #292524;
+  --background-three: #3F3F46;
+  --nav: oklch(0.985 0 0);
+  --nav-mobile: oklch(0.269 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --primary: #1c1917;
+  --primary-foreground: #D97706;
+  --secondary: #D97706;
+  --secondary-foreground: #FFFFFF;
+  --muted: #44403C;
+  --muted-foreground: #FFFFFF;
+  --important: #FFFFFF;
+  --important-foreground: #dfdfdf;
+  --accent: color-mix(in oklab, #e4dad8 10%, transparent);
+  --accent-foreground: color-mix(in oklab, #e4dad8 20%, transparent);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.269 0 0);
@@ -80,6 +94,13 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-one: var(--background-one);
+  --color-background-two: var(--background-two);
+  --color-background-three: var(--background-three);
+  --color-nav: var(--nav);
+  --color-nav-mobile: var(--nav-mobile);
+  --color-important: var(--important);
+  --color-important-foreground: var(--color-important-foreground);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
