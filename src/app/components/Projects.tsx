@@ -7,14 +7,15 @@ import { useTranslation } from "react-i18next";
 import memoryMatch from "../../images/memory-match.png";
 import musicPlayer from "../../images/music-player.png";
 import dahuPage from "../../images/dahu-page.png";
+import dahuShop from "../../images/dahu-shop.png";
 import fitnessTracker from "../../images/fitness-tracker.png";
 
 const projectsStatic = [
   { image: dahuPage, github: "https://github.com", demo: "https://dahu-page.vercel.app/" },
+  { image: dahuShop, github: "https://github.com", demo: "https://app-web-dahu.vercel.app/" },
   { image: musicPlayer, github: "https://github.com/perezcasadofidel/music-player", demo: "https://music-player-fpc.vercel.app/" },
   { image: fitnessTracker, github: "https://github.com/perezcasadofidel/Fitness-Tracker-App", demo: "https://fitness-tracker-app-fpc.vercel.app/" },
   { image: memoryMatch, github: "https://github.com/perezcasadofidel/memory-match", demo: "https://memory-match-fpc.vercel.app/" },
-  { image: "portfolio builder", github: "https://github.com", demo: "https://example.com" },
   { image: "real estate website", github: "https://github.com", demo: "https://example.com" },
 ];
 

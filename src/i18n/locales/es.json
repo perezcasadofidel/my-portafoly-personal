@@ -89,6 +89,11 @@
         "tech": ["React", "TypeScript", "Tailwind CSS", "EmailJS"]
       },
       {
+        "title": "Dahu Shop",
+        "description": "MarketPlace Web: Catálogo digital interactivo para la visualización de productos de un mercado local.",
+        "tech": ["React", "TypeScript", "NodeJS", "Next.js"]
+      },
+      {
         "title": "Interactive Music Player",
         "description": "Aplicación de reproductor de música interactivo con funcionalidades de playlist, búsqueda y sincronización en la nube.",
         "tech": ["React", "TypeScript", "Tailwind CSS", "Web Audio API"]
@@ -102,11 +107,6 @@
         "title": "Digital Memory Card Game",
         "description": "Aplicación completa de juego de memoria. Ideal para el desarrollo cognitivo, el entretenimiento educativo o como herramienta de estimulación temprana.",
         "tech": ["React", "TypeScript", "HTML", "Tailwind CSS"]
-      },
-      {
-        "title": "Portfolio Generator",
-        "description": "Herramienta para crear portafolios personalizados con plantillas dinámicas y exportación a múltiples formatos.",
-        "tech": ["Vue.js", "Express", "MySQL", "AWS S3"]
       },
       {
         "title": "Real Estate Platform",
