@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 import { ChangeColor } from "./me/ChangeColor";
 import { useTranslation } from "react-i18next";
 
@@ -78,6 +78,18 @@ export function Navigation({ setLanguage, currentLanguage }: NavigationProps) {
           </button>
 
           <div className="flex items-center gap-3">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://github.com/perezcasadofidel/my-portafoly-personal"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              transition={{ duration: 0.2 }}
+              className={`${isScrolled ? "text-muted" : "text-muted-foreground"} hover:text-amber-600 transition-colors`}
+            >
+              <Github className="w-5 h-5" />
+            </motion.a>
             <button
               onClick={() => setLanguage(currentLanguage === "es" ? "en" : "es")}
               className={`text-sm font-semibold cursor-pointer ${isScrolled ? "text-muted" : "text-muted-foreground"} hover:text-amber-600 transition-colors`}

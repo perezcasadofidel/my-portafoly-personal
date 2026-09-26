@@ -120,7 +120,7 @@ export function Hero() {
             <motion.a
               whileHover={{ scale: 1.1, rotate: -5 }}
               whileTap={{ scale: 0.95 }}
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/perez-casado-fidel/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-accent backdrop-blur-sm rounded-full hover:bg-accent-foreground transition-colors"

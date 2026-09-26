@@ -89,9 +89,9 @@
         "tech": ["React", "TypeScript", "Tailwind CSS", "EmailJS"]
       },
       {
-        "title": "Dahu Shop",
-        "description": "MarketPlace Web: Catálogo digital interactivo para la visualización de productos de un mercado local.",
-        "tech": ["React", "TypeScript", "NodeJS", "Next.js"]
+        "title": "E-commerce Aura",
+        "description": "Tienda de e-commerce de moda sostenible para mujer y hombre, con catálogo de productos y carrito de compra para prendas elaboradas con materiales reciclados y orgánicos.",
+        "tech": ["React", "Tailwind CSS", "React Router", "Vite"]
       },
       {
         "title": "Interactive Music Player",
@@ -109,9 +109,9 @@
         "tech": ["React", "TypeScript", "HTML", "Tailwind CSS"]
       },
       {
-        "title": "Real Estate Platform",
-        "description": "Plataforma inmobiliaria con búsqueda avanzada, tours virtuales 360° y sistema de mensajería integrado.",
-        "tech": ["Angular", "Spring Boot", "PostgreSQL"]
+        "title": "Mood Memoir",
+        "description": "Aplicación de diario emocional para registrar tu estado de ánimo diario y tus recuerdos, organizando tu historia emocional en un solo lugar.",
+        "tech": ["React", "TypeScript", "Vite"]
       }
     ]
   },
