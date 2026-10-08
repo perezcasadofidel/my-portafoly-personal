@@ -1,10 +1,16 @@
 import { motion } from "motion/react";
 import { ChevronDown, Github, Linkedin, Mail,Download } from "lucide-react";
-import cvFileUrl from "@/public/Fidel_Pérez_Casado.pdf?url";
+import cvEnUrl from "@/public/fidel_pérez_casado_cv_EN.pdf?url";
+import cvEsUrl from "@/public/fidel_pérez_casado_cv_ES.pdf?url";
 import { useTranslation } from "react-i18next";
 
 export function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isSpanish = i18n.language === "es";
+  const cvFileUrl = isSpanish ? cvEsUrl : cvEnUrl;
+  const cvFileName = isSpanish
+    ? "Fidel_Perez_Casado_CV_ES.pdf"
+    : "Fidel_Perez_Casado_CV_EN.pdf";
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -85,7 +91,7 @@ export function Hero() {
             </button>
             <a
               href={cvFileUrl}
-              download="Fidel_Pérez_Casado.pdf"
+              download={cvFileName}
               className="px-7 py-3 rounded-xl transition-all duration-200 hover:scale-105 border"
               style={{
                 color: "#FF6F00",
