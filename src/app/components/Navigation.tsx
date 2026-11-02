@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Menu, X, Github } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { Github } from "./ui/brand-icons";
 import { ChangeColor } from "./me/ChangeColor";
 import { useTranslation } from "react-i18next";
 

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { ChevronDown, Github, Linkedin, Mail,Download } from "lucide-react";
+import { ChevronDown, Mail, Download } from "lucide-react";
+import { Github, Linkedin } from "./ui/brand-icons";
 import cvEnUrl from "@/public/fidel_pérez_casado_cv_EN.pdf?url";
 import cvEsUrl from "@/public/fidel_pérez_casado_cv_ES.pdf?url";
 import { useTranslation } from "react-i18next";

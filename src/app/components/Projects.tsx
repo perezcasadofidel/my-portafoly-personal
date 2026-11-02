@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { Github } from "./ui/brand-icons";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useTranslation } from "react-i18next";
 
